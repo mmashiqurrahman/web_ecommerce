@@ -30,6 +30,5 @@ Route::delete('/admin/categories/{id}/destroy', [CategoryController::class, 'des
 Route::resource('/admin/products', ProductController::class);
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductController::class, 'displayGrid']);
+

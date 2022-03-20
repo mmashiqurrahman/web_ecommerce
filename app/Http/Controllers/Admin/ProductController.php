@@ -24,6 +24,11 @@ class ProductController extends Controller
         return view('admin.products.show', ['product' => $product]);
     }
 
+    public function displayGrid() {
+        $products = Product::all();
+        return view('admin.homepage', ['products' => $products]);
+    }
+
     public function create() {
         $categories = Category::all();
         return view('admin.products.create', ['categories' => $categories]);
