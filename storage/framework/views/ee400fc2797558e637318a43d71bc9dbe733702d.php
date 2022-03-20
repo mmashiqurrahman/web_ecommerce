@@ -9,7 +9,7 @@
     <title>foodFiesta</title>
 
     <!-- Bootstrap core CSS -->
-<link href="{{ asset('assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="<?php echo e(asset('assets/dist/css/bootstrap.min.css')); ?>" rel="stylesheet">
 
   </head>
   <body style="background-color: #d5d5d5;">
@@ -24,7 +24,7 @@
       <ul class="navbar-nav mr-auto">
        
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
+          <a class="nav-link" href="<?php echo e(route('categories.index')); ?>">Categories</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">All Products</a>
@@ -45,3 +45,4 @@
     </div>
   </div>
 </div>
+<?php /**PATH D:\xampp\htdocs\web_ecommerce\resources\views/admin/layouts/inc/header.blade.php ENDPATH**/ ?>
