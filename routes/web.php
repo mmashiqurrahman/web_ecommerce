@@ -25,6 +25,9 @@ Route::put('/admin/categories/{id}/update', [CategoryController::class, 'update'
 Route::delete('/admin/categories/{id}/destroy', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
 
+/* The following route interacts with products. This route alone handles all the operations above. */
+Route::resource('/admin/products', ProductController::class);
+
 
 Route::get('/', function () {
     return view('welcome');
