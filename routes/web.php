@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->
 Route::put('/admin/categories/{id}/update', [CategoryController::class, 'update'])->name('categories.update');
 Route::delete('/admin/categories/{id}/destroy', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
+
+/* The following route interacts with products. This route alone handles all the operations above. */
+Route::resource('/admin/products', ProductController::class);
 
 
 Route::get('/', function () {
